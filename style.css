@@ -1,47 +1,105 @@
-.container, .greed-box{
+.container,
+.greed-box {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-body{
+body {
   background: url("./background.jpeg") 50% 10% / cover no-repeat;
   background-size: 150%;
 }
 
-#root{
+#root {
   position: relative;
   top: 50%;
   left: 0;
   max-height: 100%;
 }
 
-.box{
+.box {
   display: flex;
   gap: 15px;
- transform: translateY(21vw);
+  /* position: relative; */
+  transform: translateY(4vw);
 }
 
-.greed-box{
+.greed-box {
   transform: translateY(5vw);
-
 }
 
 .box * {
-cursor: pointer;
+  cursor: pointer;
 }
 
-.td-cent{
- text-align: center;
- font-size: 23px;
+.td-cent {
+  text-align: center;
+  font-size: 23px;
 }
 
-.win-container, .lose-container{
+.win-container,
+.lose-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  position: relative;
+}
+
+.gridSizeContainer {
+ transform: translateY(-16px);
+}
+
+.button-start {
+  position: absolute;
+  top: 200%;
+  left: 40%;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  background: linear-gradient(to right, #86b6c3, #004a99);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.select {
+  width: 100%;
+  padding: 10px; 
+  font-size: 16px; 
+  border-radius: 10px; 
+  border: 2px solid #0074cc; 
+  background: linear-gradient(to right, #b3ecff, #0074cc);
+  color: #000;
+  outline: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.select:hover {
+  background: linear-gradient(to right, #c3fff6, #004a99); 
+  transform: scale(1.02); 
+}
+
+.select:focus {
+  border-color: #004a99; 
+  box-shadow: 0 0 10px rgba(0, 116, 204, 0.5); 
+}
+
+.button-start:hover {
+  background: linear-gradient(to right, #77d0ed, #0074cc);
+  transform: scale(1.05);
+}
+
+.gridSizeSelectText {
+  background-color: #dff9f5;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 /* .container{
@@ -52,5 +110,3 @@ cursor: pointer;
 } */
 
 /* ................................................... */
-
-

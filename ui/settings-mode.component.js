@@ -24,6 +24,13 @@ SettingsMode.render = (element) => {
     setGridSize(selectedValue);
   });
 
+  const gridSizeContainer = document.createElement("p");
+  gridSizeContainer.classList.add("gridSizeContainer")
+
+  const gridSizeSelectText = document.createElement("p");
+  gridSizeSelectText.classList.add('gridSizeSelectText')
+  gridSizeSelectText.textContent = 'Выберите размер поля:';
+
   for (let size = 4; size <= 8; size++) {
     const gridSizeOptionElement = document.createElement("option");
     gridSizeSelectElement.classList.add("option")
@@ -32,7 +39,8 @@ SettingsMode.render = (element) => {
     gridSizeSelectElement.append(gridSizeOptionElement);
   }
 
-  element.append(gridSizeSelectElement);
+  gridSizeContainer.append(gridSizeSelectText, gridSizeSelectElement)
+  element.append(gridSizeContainer);
 
   const startButtonElement = document.createElement("button");
   startButtonElement.classList.add("button-start")
@@ -47,7 +55,7 @@ SettingsMode.render = (element) => {
   const pointsToWin = PointsToWin();
   const pointsToLose = PointsToLose();
 
-  element.append(startButtonElement, pointsToWin.element, pointsToLose.element);
+  element.append( startButtonElement, pointsToWin.element, pointsToLose.element);
 };
 
 // ..........................................................
@@ -63,6 +71,10 @@ export function PointsToWin() {
 PointsToWin.render = (element) => {
   const PointsToWinSelectElement = document.createElement("select");
   PointsToWinSelectElement.classList.add("select")
+
+  const PointsToWinSelectText = document.createElement("p");
+  PointsToWinSelectText.classList.add('gridSizeSelectText')
+  PointsToWinSelectText.textContent = 'Выберите колличество очков для победы:';
 
   const pointsToWinCount = getPointsToWin();
   for (let i = 10; i <= 60; i += 10) {
@@ -82,7 +94,7 @@ PointsToWin.render = (element) => {
     setPointsToWin(selectedValue);
   });
 
-  element.append(PointsToWinSelectElement);
+  element.append(PointsToWinSelectText, PointsToWinSelectElement);
 };
 
 // ..........................................................
@@ -100,6 +112,11 @@ PointsToLose.render = (element) => {
   PointsToLoseSelectElement.classList.add("select")
 
   const pointsToLoseCount = getPointsToLose();
+
+  const PointsToLoseText = document.createElement("p");
+  PointsToLoseText.classList.add('gridSizeSelectText')
+  PointsToLoseText.textContent = 'Выберите колличество очков для поражения:';
+
   for (let i = 5; i <= 25; i += 5) {
     const PointsToLoseOptionElement = document.createElement("option");
     PointsToLoseOptionElement.classList.add("option")
@@ -117,5 +134,5 @@ PointsToLose.render = (element) => {
     setPointsToLose(selectedValue);
   });
 
-  element.append(PointsToLoseSelectElement);
+  element.append(PointsToLoseText, PointsToLoseSelectElement);
 };
