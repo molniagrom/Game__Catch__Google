@@ -11,10 +11,13 @@ export function LoseMode() {
 
 LoseMode.render = (element) => {
   const p = document.createElement("p");
-  p.append("GOOGLE WIN");
+  p.classList.add("p-result")
+  p.append("GOOGLE ВЫИГРАЛ");
   element.append(p);
 
   const playAgainButtonElement = document.createElement("button");
+  playAgainButtonElement.classList.add("button-lose")
+
   playAgainButtonElement.append("PLAY AGAIN 🚀");
 
   element.append(playAgainButtonElement);

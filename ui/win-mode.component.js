@@ -10,10 +10,13 @@ export function WinMode() {
 
 WinMode.render = (element) => {
   const p = document.createElement("p");
+  p.classList.add("p-result")
   p.append("YOU WIN");
   element.append(p);
 
   const playAgainButtonElement = document.createElement("button");
+  playAgainButtonElement.classList.add("button-win")
+
   playAgainButtonElement.append("PLAY AGAIN 🚀");
   element.append(playAgainButtonElement);
 

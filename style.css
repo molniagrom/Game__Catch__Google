@@ -1,11 +1,15 @@
-.container,
-.greed-box {
+.container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
+.greed-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body {
   background: url("./background.jpeg") 50% 10% / cover no-repeat;
   background-size: 150%;
@@ -51,7 +55,7 @@ body {
 }
 
 .gridSizeContainer {
- transform: translateY(-16px);
+  transform: translateY(-16px);
 }
 
 .button-start {
@@ -68,27 +72,57 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.button-lose {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  background: linear-gradient(to right, #86b6c3, #004a99);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button-win {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  background: linear-gradient(to right, #86b6c3, #004a99);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.points {
+  background-color: rgba(57, 61, 55, 0.4);
+  border-radius: 40px;
+  border: 1px rgba(76, 94, 80, 1) solid;
+  padding: 20px;
+  margin: 0px 0px 24px 0px;
+  color: #fff;
+}
+
 .select {
   width: 100%;
-  padding: 10px; 
-  font-size: 16px; 
-  border-radius: 10px; 
-  border: 2px solid #0074cc; 
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #0074cc;
   background: linear-gradient(to right, #b3ecff, #0074cc);
   color: #000;
-  outline: none; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease, transform 0.3s ease; 
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .select:hover {
-  background: linear-gradient(to right, #c3fff6, #004a99); 
-  transform: scale(1.02); 
+  background: linear-gradient(to right, #c3fff6, #004a99);
+  transform: scale(1.02);
 }
 
 .select:focus {
-  border-color: #004a99; 
-  box-shadow: 0 0 10px rgba(0, 116, 204, 0.5); 
+  border-color: #004a99;
+  box-shadow: 0 0 10px rgba(0, 116, 204, 0.5);
 }
 
 .button-start:hover {
@@ -102,12 +136,17 @@ body {
   border-radius: 10px;
 }
 
-.td-cent{
-  border: #999B95 2px solid;
+.td-cent {
+  border: #999b95 2px solid;
   border-radius: 5px;
   background-color: rgba(110, 117, 102, 0.3);
 }
 
+.p-result {
+  background-color: #dff9f5;
+  padding: 7px;
+  border-radius: 10px;
+}
 /* .container{
    position: absolute;
   top: 100%;

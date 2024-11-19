@@ -2,7 +2,7 @@ import { getPoints, subscribe } from "./data.js";
 
 export function Points() {
   const element = document.createElement("div");
-
+  element.classList.add("points");
   subscribe(() => {
     Points.render(element);
   });
@@ -19,8 +19,8 @@ Points.render = (element) => {
   let pointsAsString = "";
 
   for (let characker in points) {
-    pointsAsString += `${characker}: ${points[characker]}`;
+    pointsAsString += `${characker}: ${points[characker]} `;
   }
 
-  element.append(pointsAsString)
+  element.append(pointsAsString);
 };

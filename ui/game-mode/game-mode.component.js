@@ -24,5 +24,5 @@ GameMode.render = (element, localStste) => {
   localStste.childrenCleanUps.push(gridComponentInstance.cleanup);
 //   localStste.childrenCleanUps.push(pointsInstanse.cleanup);
 
-  element.append(gridComponentInstance.element, pointsInstanse.element);
+  element.append( pointsInstanse.element, gridComponentInstance.element);
 };
