@@ -102,6 +102,12 @@ body {
   border-radius: 10px;
 }
 
+.td-cent{
+  border: #999B95 2px solid;
+  border-radius: 5px;
+  background-color: rgba(110, 117, 102, 0.3);
+}
+
 /* .container{
    position: absolute;
   top: 100%;

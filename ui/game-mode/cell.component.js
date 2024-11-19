@@ -6,6 +6,7 @@ import {
 } from "../../state/data.js";
 import { EVENTS } from "../../state/EVENTS.js";
 import { GoogleImg } from "../createImgGoogle.js";
+import { CreatePlayer } from "../createPlayer.js";
 
 export function Cell(x, y) {
   console.log("Cell creating...");
@@ -19,14 +20,13 @@ export function Cell(x, y) {
       event.type === EVENTS.PLAYER_MOVED
     ) {
       if (
-        event.payload.newPositions.x === x &&
-        event.payload.newPositions.y === y ||
-        event.payload.prevPositions.x === x &&
-        event.payload.prevPositions.y === y
+        (event.payload.newPositions.x === x &&
+          event.payload.newPositions.y === y) ||
+        (event.payload.prevPositions.x === x &&
+          event.payload.prevPositions.y === y)
       ) {
         Cell.render(element, x, y);
       }
-      
     }
   });
 
@@ -57,10 +57,14 @@ Cell.render = (element, x, y) => {
   }
 
   if (x === player1Position.x && y === player1Position.y) {
-    element.append("👨‍💼");
+    const p1 = "This is the first player";
+    const player1 = CreatePlayer(p1);
+    element.append(player1.element);
   }
 
   if (x === player2Position.x && y === player2Position.y) {
-    element.append("👨");
+    const p2 = "This is the second player";
+    const player1 = CreatePlayer(p2);
+    element.append(player1.element);
   }
 };
